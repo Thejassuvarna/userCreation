@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit User</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="w-full min-h-screen bg-zinc-900 p-10 text-white">
+
+        <h1 class="text-3xl mb-5">
+            Edit User
+        </h1>
+
+        <form action="/update/<%= user._id %>" method="post">
+
+            <input
+                class="px-5 py-2 bg-zinc-700 border-2 outline-none rounded-lg border-zinc-800 text-zinc-400" 
+                type="text"
+                disabled = "true" 
+                name="oldImg"
+                value="<%= user.img %>"
+                placeholder="Image URL"
+            >
+            <input
+                class="px-5 py-2 bg-zinc-700 border-2 outline-none rounded-lg border-zinc-800"
+                type="text"
+                name="newImg"
+                placeholder="New Image URL"
+            >
+            <br>
+            <input
+                class="px-5 py-2 mt-3 bg-zinc-700 border-2 outline-none rounded-lg border-zinc-800 text-zinc-400"
+                type="text"
+                disabled = "true"
+                name="oldName"
+                value="<%= user.userName %>"
+                placeholder="Name"
+            >
+            <input
+                class="px-5 py-2 mt-3 bg-zinc-700 border-2 outline-none rounded-lg border-zinc-800 "
+                type="text"
+                name="newName"
+                placeholder="New Name"
+            >
+            <br>
+            <input
+                class="px-5 py-2 mt-3 bg-zinc-700 border-2 outline-none rounded-lg border-zinc-800 text-zinc-400 "
+                type="text"
+                disabled = "true"
+                name="oldEmail"
+                value="<%= user.email %>"
+                placeholder="Email"
+            >
+
+            <input
+                class="px-5 py-2 mt-3 bg-zinc-700 border-2 outline-none rounded-lg border-zinc-800"
+                type="text"
+                name="newEmail"
+                placeholder="New Email"
+            >
+            <br>
+
+            <input
+                class="px-5 py-2 bg-green-500 rounded-lg"
+                type="submit"
+                value="Update"
+            >
+
+            <a
+            href="/read"
+            class="inline-block mt-5 ml-5 px-5 py-2 bg-zinc-700 rounded-lg"
+            >
+            Cancel
+            </a>
+
+        </form>
+
+        
+
+    </div>
+
+</body>
+
+</html>

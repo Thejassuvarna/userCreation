@@ -1,0 +1,17 @@
+{
+  "name": "mongodb-by-sher",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "thejas",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.5"
+  }
+}
